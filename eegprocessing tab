@@ -1,0 +1,122 @@
+if (Ibin == 21 && Ichan == 1) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 5){
+                 //    println("Ichan =1 , Ibin = 21, FFT_value_uV = " + FFT_value_uV);
+
+                  counter1++;
+                  counter2 = 0;
+                    println("Near CN" , "counter1 = " + counter1);
+                if (counter1 == 3){
+                  
+                  Ibin = 18;
+                   FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                  println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 18 && FFT_value_uV < 1){
+                  
+                  if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = counter2 = 0;
+                  }
+                  
+             }else{
+             counter1 = 0;
+           }  
+                   }
+                   
+               }                   
+                  }
+                  
+                  if (Ibin == 22 && Ichan == 1) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 5){
+                 //    println("Ichan =1 , Ibin = 21, FFT_value_uV = " + FFT_value_uV);
+
+                  counter1++;
+                  counter2 = 0;
+           println("Near CN" , "counter1 = " + counter1);
+           
+                if (counter1 == 3){
+                  
+                  Ibin = 18;
+                   FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                   println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 18 && FFT_value_uV < 1){
+                  
+                  if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = counter2 = 0;
+                  }
+                  
+             }else{
+             counter1 = 0;
+           }  
+                   }
+                   
+               }                   
+                  }
+                  
+                  if (Ibin == 21 && Ichan == 2) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 5){
+                 //    println("Ichan =1 , Ibin = 21, FFT_value_uV = " + FFT_value_uV);
+
+                  counter1++;
+                  counter2 = 0;
+            println("Near CN" , "counter1 = " + counter1);
+            
+                if (counter1 == 3){
+                 
+                  
+                  Ibin = 18;
+                   FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                   println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 18 && FFT_value_uV < 1){
+                  
+                  if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = counter2 = 0;
+                  }
+                  
+             }else{
+             counter1 = 0;
+           }
+           
+                   }
+                   
+               }                   
+                  }
+                  
+                  if (Ibin == 22 && Ichan == 2) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 5){
+                 //    println("Ichan =1 , Ibin = 21, FFT_value_uV = " + FFT_value_uV);
+
+                  counter1++;
+                  counter2 = 0;
+            println("Near CN" , "counter1 = " + counter1);
+            
+                if (counter1 == 3){
+                  
+                  Ibin = 18;
+                   FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                   println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 18 && FFT_value_uV < 1){
+                  
+                  if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = counter2 = 0;
+                  }
+                  
+             }
+           else{
+             counter1 = 0;
+           }
+           
+                   }
+                   
+               }                   
+                  }
