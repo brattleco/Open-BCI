@@ -1,0 +1,1209 @@
+      if (Ibin == 17  && Ichan == 1) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                  println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                 
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                  
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){      // frequency 9 on fp1
+
+              //    if (ardu_serial != null){
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                       ardu_serial.write('B');
+                         ardu_serial.write('B');
+                           ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+              //    } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+               
+
+if (Ibin == 18  && Ichan == 1) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                  println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){      //frequeny 6
+                  
+                     Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                  
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+               //   if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                      
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+              //    } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+if (Ibin == 19  && Ichan == 1) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){  // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+              //    if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                      
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+              //    } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+if (Ibin == 20  && Ichan == 1) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                    
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+              //    if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                      
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+             //     } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+if (Ibin == 21  && Ichan == 1) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+             //     if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                      
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+             //     } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+if (Ibin == 22  && Ichan == 1) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+             //     if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                      
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+              //    } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+if (Ibin == 23  && Ichan == 1) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+             //     if (ardu_serial != null){
+                ardu_serial.write('B');
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                     
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+              //    } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+if (Ibin == 24  && Ichan == 1) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+              //    if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+              //    } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+if (Ibin == 25  && Ichan == 1) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+             //     if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                      
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+              //    } 
+             }else{
+                  counter1 = 0;
+                   println("Not concenrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+
+if (Ibin == 26  && Ichan == 1) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+              //    if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                      
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+              //    } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+if (Ibin == 27  && Ichan == 1) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+            //      if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+             //     } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+   
+      if (Ibin == 17  && Ichan == 2) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+              //    if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+              //    } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+if (Ibin == 18  && Ichan == 2) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+                    println("fftval = " + FFT_value_uV);
+              //    if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                  counter1 = 0;
+               //   } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+if (Ibin == 19  && Ichan == 2) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+            //      if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+             //     } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+
+if (Ibin == 20  && Ichan == 2) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+            //      if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+              //    } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+
+if (Ibin == 21  && Ichan == 2) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+           //       if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+             //     } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+
+if (Ibin == 22  && Ichan == 2) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+             //     if (ardu_serial != null){
+                ardu_serial.write('B');
+                 ardu_serial.write('B');
+                  ardu_serial.write('B');
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+              //    } 
+             }else{
+                  counter1 = 0;
+                   println("fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+
+if (Ibin == 23  && Ichan == 2) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+            //      if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+             //     } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+               
+
+if (Ibin == 24  && Ichan == 2) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+           //       if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                   println("concentration " + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+           //       } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+
+if (Ibin == 25  && Ichan == 2) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+           //       if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+            //      } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+
+
+if (Ibin == 26  && Ichan == 2) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+           //       if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+            //      } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+               
+
+
+if (Ibin == 27  && Ichan == 2) {
+                FFT_write_string = FFT_write_string + ","+ FFT_value_uV ;
+                   if(FFT_value_uV >= 3 && FFT_value_uV <= 9){
+               
+                  counter1++;
+                  
+                println("counter = " + counter1);
+                
+                if (counter1 == 26){
+                     println("Ibin = " + Ibin + " , Ichan = " + Ichan);
+                  Ibin = 14;
+                 FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                 // println("chan= " + Ichan + " , bin = " + Ibin + " , fftval = " + FFT_value_uV);
+                  if (Ibin == 14 && FFT_value_uV < 1){    // frequency 6
+                    
+                       Ibin = 29;
+                     FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                     if (Ibin == 29 && FFT_value_uV < 1){    // frequency 14
+                     
+                  println("vision cortex is ok");
+                    Ichan = 3;
+                    Ibin = 19;
+                    FFT_value_uV = fftData[Ichan].getBand(Ibin);
+                    
+                    if (Ibin == 19 && FFT_value_uV < 1.9){
+
+             //     if (ardu_serial != null){
+                  ardu_serial.write('B');
+                   ardu_serial.write('B');
+                    ardu_serial.write('B');
+                     ardu_serial.write('B');
+                      ardu_serial.write('B');
+                   println("concentration" + FFT_value_uV + "Ibin = " + Ibin + "chan = " + Ichan);
+                   counter1 = 0;
+              //    } 
+             }else{
+                  counter1 = 0;
+                   println("Not concentrate , fftval = " + FFT_value_uV);
+                }
+                
+                  }else{
+                    println("frequency 14 is not ok");
+             counter1 = 0;
+                  }
+                  
+                  }else {
+                     println("frequency 6 is not ok");
+                  counter1 = 0;
+                  }
+           }  
+                   }
+                   
+               }
+               
+                
+
+                  if (counter1 >=26 ){
+                  println ("Yes Yes Yes");
+                  counter1 = 0;
+                  
+                  }
